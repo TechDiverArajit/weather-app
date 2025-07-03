@@ -2,6 +2,7 @@ import React ,{useEffect, useRef, useState} from "react"
 const Weather = ()=>{
     const[city ,setCity] = useState("");
       const[weather , setWeather] = useState(null);
+      const[icon , setIcon] = useState("clouds");
       
       const cityRef = useRef();
       
@@ -11,9 +12,11 @@ const Weather = ()=>{
     
           try{
             const response = await fetch(apiUrl);
-          const data = await response.json();
+            const data = await response.json();
           console.log(data);
           setWeather(data);
+          setIcon(data.weather[0].main);
+          
           
           }catch{
             console.log("error")
@@ -54,7 +57,7 @@ const Weather = ()=>{
               </p>
             </div>
             <div className="weatherIcon">
-              <img src="./assets/cloudy-day.png" width={200} alt="" />
+              <img src={`./src/assets/${icon}.png`} width={200}  />
               </div>
             <div className="deg">
                 {weather?.main?.temp? (<h4>{Math.round(weather.main.temp)}℃</h4>):(<h4>0℃</h4>)}
