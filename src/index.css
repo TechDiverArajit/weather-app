@@ -4,3 +4,76 @@
   padding: 0;
   font-family: "Outfit", sans-serif;
 }
+body{
+  background-color: #dadada;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+input{
+  width: 280px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 5px 5px 5px gray;
+  padding-left: 15px;
+  margin-top: 15px;
+  margin-left: 12px;
+  font-size: 18px;
+}
+button{
+  height: 48px;
+  width: 80px;
+  border:5px solid rgb(56, 56, 56) ;
+  border-radius: 0px 30px 30px 0px;
+  
+  box-shadow: 5px 5px 5px gray;
+}
+.DayAndDate{
+  display: flex;
+  gap: 10px;
+  padding-top: 30px;
+  justify-content: center;
+  
+}
+.currTime{
+  margin-top: 10px;
+  text-align: center;
+}
+.place{
+  margin-top: 10px;
+  text-align: center;
+}
+.container{
+  background-color: aliceblue;
+  width: 400px;
+  height: 600px;
+  border: none;
+  box-shadow: 5px 5px 5px gray;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.weatherIcon{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.deg{
+display: flex;
+justify-content: center;
+}
+.deg span{
+  font-size: 30px;
+  
+}
+
+h4{
+  font-size: 50px;
+}
